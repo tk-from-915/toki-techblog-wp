@@ -102,8 +102,8 @@
 	 */
 	api.Preview = api.Messenger.extend(/** @lends wp.customize.Preview.prototype */{
 		/**
-		 * @param {object} params  - Parameters to configure the messenger.
-		 * @param {object} options - Extend any instance parameter or method with this object.
+		 * @param {Object} params  - Parameters to configure the messenger.
+		 * @param {Object} options - Extend any instance parameter or method with this object.
 		 */
 		initialize: function( params, options ) {
 			var preview = this, urlParser = document.createElement( 'a' );
@@ -276,8 +276,8 @@
 	 * @param {string} element.search Query string.
 	 * @param {string} element.pathname Path.
 	 * @param {string} element.host Host.
-	 * @param {object} [options]
-	 * @param {object} [options.allowAdminAjax=false] Allow admin-ajax.php requests.
+	 * @param {Object} [options]
+	 * @param {Object} [options.allowAdminAjax=false] Allow admin-ajax.php requests.
 	 * @return {boolean} Is appropriate for changeset link.
 	 */
 	api.isLinkPreviewable = function isLinkPreviewable( element, options ) {
@@ -399,10 +399,10 @@
 		/**
 		 * Rewrite Ajax requests to inject customizer state.
 		 *
-		 * @param {object} options Options.
+		 * @param {Object} options Options.
 		 * @param {string} options.type Type.
 		 * @param {string} options.url URL.
-		 * @param {object} originalOptions Original options.
+		 * @param {Object} originalOptions Original options.
 		 * @param {XMLHttpRequest} xhr XHR.
 		 * @return {void}
 		 */
@@ -635,11 +635,28 @@
 		/**
 		 * Preview changes to custom css.
 		 *
-		 * @param {string} value Custom CSS..
+		 * @param {string} value Custom CSS.
 		 * @return {void}
 		 */
 		custom_css: function( value ) {
-			$( '#wp-custom-css' ).text( value );
+			var style;
+			if ( api.settings.theme.isBlockTheme ) {
+				style = $( 'style#global-styles-inline-css' );
+
+				// Forbid milestone comments from appearing in Custom CSS which would break live preview.
+				value = value.replace( /\/\*(BEGIN|END)_CUSTOMIZER_CUSTOM_CSS\*\//g, '' );
+
+				var textContent = style.text().replace(
+					/(\/\*BEGIN_CUSTOMIZER_CUSTOM_CSS\*\/)((?:.|\s)*?)(\/\*END_CUSTOMIZER_CUSTOM_CSS\*\/)/,
+					function ( match, beforeComment, oldValue, afterComment ) {
+						return beforeComment + '\n' + value + '\n' + afterComment;
+					}
+				);
+				style.text( textContent );
+			} else {
+				style = $( 'style#wp-custom-css' );
+				style.text( value );
+			}
 		},
 
 		/**
