@@ -1,28 +1,23 @@
-# 機密情報・環境設定
-.env
-wp-config.php
-
-# WordPress アップロードファイル (容量が大きいためGit管理外)
+# WordPress
 wp-content/uploads/
-
-# WordPress キャッシュ
-wp-content/cache/
-wp-content/upgrade/
-
-# ログ
 wp-content/debug.log
+wp-content/upgrade/
+wp-content/cache/
+
+# WordPress core（バージョン管理不要なコアファイル）
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/license.txt
+/readme.html
+/wp-config-sample.php
+
+# 環境固有
+.env
 *.log
 
-# OS生成ファイル
+# OS
 .DS_Store
 Thumbs.db
-
-# IDE設定
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# Docker
-# docker-compose.override.yml は各自のローカル設定用にgit管理外にする場合はコメント解除
-# docker-compose.override.yml
