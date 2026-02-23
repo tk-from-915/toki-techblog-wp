@@ -3,12 +3,12 @@
 <!--ここからメインコンテンツ-->
 <div id="wrapper">
 	<div id="mein">
-		<h1><?php wp_title();?></h1>
+		<h1><?php echo esc_html( get_the_title() ); ?></h1>
 
         <div class = "category_description">
             <div id ="Breadcrumb">
                 <?php if(function_exists("the_breadcrumb")){the_breadcrumb();} ?>
-                /<?php wp_title();?>
+                /<?php echo esc_html( get_the_title() ); ?>
             </div>
             作成日時：<?php the_time('Y/m/j');?>
             　タグ：<?php the_tags(' ',',');?>
@@ -67,7 +67,7 @@
 		<div id ="related-posts-area">
 		<h2>こちらの記事も読まれてます</h2>
 		<?php
-		$tags = wp_get_post_tags( $post->ID,array('orderby'=>'rand'));	
+		$tags = get_the_tags();
 
 		if($tags){
 			$first_tag = $tags[0]->term_id;

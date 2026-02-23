@@ -15,7 +15,7 @@
 
     <title>Tech embodyer's note</title>
 	<meta charset="UTF-8">
-	<meta name="description" content="ふと浮かんだアイデアをプログラミングで形にする"＞
+	<meta name="description" content="ふと浮かんだアイデアをプログラミングで形にする">
 	<meta name="keywords" content="プログラミング">
     <meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Yellowtail|Yu_mincho|SimSun" rel="stylesheet">
@@ -25,7 +25,7 @@
 
 	<?php wp_head(); ?>
 </head>
-<body background = "data:image/jpg;base64,<?php echo base64_encode(file_get_contents('images/desk.jpg'));?>" <?php body_class(); ?>>
+<body style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/images/desk.jpg' ); ?>');" <?php body_class(); ?>>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id= UA-133698749-1"></script>
 <script>
@@ -35,7 +35,7 @@
 
     gtag('config', 'UA-133698749-1');
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script type="text/javascript">
     $(function(){
         var topBtn = $('#page-top');

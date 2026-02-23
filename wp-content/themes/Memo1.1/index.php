@@ -43,12 +43,12 @@
 					<script>
 				     (adsbygoogle = window.adsbygoogle || []).push({});
 					</script>	
-					<?
+					<?php
 					}
 					$ads_infeed_count++;?>
 
                     <div class="post">
-                        <h5><a href="<?php the_permalink();?>"><?php the_title();?></h5>
+                        <h5><a href="<?php the_permalink();?>"><?php the_title();?></a></h5>
 
                         <div class="thumbnail">
                             <?php if(has_post_thumbnail()) { echo get_the_post_thumbnail(); } ?>

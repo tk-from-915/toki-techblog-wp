@@ -1,5 +1,38 @@
 <?php
 
+/**カスタム投稿タイプの登録**/
+add_action( 'init', 'register_custom_post_types' );
+function register_custom_post_types() {
+    $post_types = array(
+        'infrastructure' => array(
+            'label'  => 'インフラ',
+            'labels' => array( 'name' => 'インフラ', 'singular_name' => 'インフラ' ),
+        ),
+        'development_and_tool' => array(
+            'label'  => '開発・ツール',
+            'labels' => array( 'name' => '開発・ツール', 'singular_name' => '開発・ツール' ),
+        ),
+        'web_and_aplication' => array(
+            'label'  => 'Web・アプリ',
+            'labels' => array( 'name' => 'Web・アプリ', 'singular_name' => 'Web・アプリ' ),
+        ),
+        'market_analysis' => array(
+            'label'  => '市場分析',
+            'labels' => array( 'name' => '市場分析', 'singular_name' => '市場分析' ),
+        ),
+    );
+
+    foreach ( $post_types as $slug => $args ) {
+        register_post_type( $slug, array_merge( array(
+            'public'       => true,
+            'has_archive'  => true,
+            'show_in_rest' => true,
+            'supports'     => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
+            'rewrite'      => array( 'slug' => $slug ),
+        ), $args ) );
+    }
+}
+
 /**カスタムメニューを有効化する**/
 add_theme_support('menus');
 
@@ -173,6 +206,9 @@ function relation_posts(){
         'post_type'    =>'any'
     ];
 
+    if ( ! function_exists( 'sga_ranking_get_date' ) ) {
+        return;
+    }
     $ranking_data = sga_ranking_get_date($data);
     if ( !empty( $ranking_data ) ) {
         foreach ( $ranking_data as $post_id ) {
