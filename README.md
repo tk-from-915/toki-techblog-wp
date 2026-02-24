@@ -21,6 +21,8 @@ Note: While the blog theme itself was originally developed around 2016, it was o
 完成したテーマを公開するため、当初は設定済みのレンタルサーバー（Xserver等）を利用していましたが、より自由度の高い環境を求めて VPS（さくらVPS等） での運用に挑戦しました。OS（Linux）のみがインストールされた状態から、約1ヶ月かけて LEMP環境（Nginx, MySQL, PHP）を自力で構築。当初はApacheで構築を試みたものの、最終的にはパフォーマンスを重視して Nginx を採用しました。ドメインの紐付け（DNS設定）までを完結させ、自作テーマの公開に至りました。
 
 ※このブログテーマ自体は2016年ごろに作成したものですが、GitHubにアップロードしたのは2020年ごろになります。
+
+
 ---
 
 ## Getting Started / 起動方法
