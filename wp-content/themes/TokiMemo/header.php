@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Yellowtail|Yu_mincho|SimSun" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
-    <link rel="icon" href="wp-content/themes/Memo1.1/wingpen.ico">
+    <link rel="icon" href="wp-content/themes/TokiMemo/wingpen.ico">
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 
 	<?php wp_head(); ?>

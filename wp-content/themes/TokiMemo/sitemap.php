@@ -8,7 +8,7 @@
 
 <!--ここからメインコンテンツ-->
 <div id="wrapper">
-<!div id="wrapper" background ="/home/www/wp/wordpress/wp-content/themes/Memo1.1/images/ringnote-middle.png">
+<!div id="wrapper" background ="/home/www/wp/wordpress/wp-content/themes/TokiMemo/images/ringnote-middle.png">
 	<div id="mein">
         <h1><?php the_title();?></h1>
         <div class = "category_description">

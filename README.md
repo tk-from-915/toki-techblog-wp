@@ -1,7 +1,7 @@
 # toki-techblog-wp
 
 ## Overview&Background / 概要と背景
-Around 2015, when the concept of "professional blogging" was beginning to trend, I first discovered WordPress. As I explored various blogs, I realized that rather than writing articles, my true passion lay in creating the beautiful, high-quality designs of the blogs themselves—despite having no prior programming knowledge at the time.
+Around 2016, when the concept of "professional blogging" was beginning to trend, I first discovered WordPress. As I explored various blogs, I realized that rather than writing articles, my true passion lay in creating the beautiful, high-quality designs of the blogs themselves—despite having no prior programming knowledge at the time.
 
 Phase 1: Design & Theme Development
 I started by sketching my visual concepts on paper and began designing with HTML/CSS textbooks in hand. I install XAMPP on my PC and spent approximately two and a half months building a custom WordPress theme from scratch.
@@ -12,7 +12,7 @@ Once the theme was complete, I wanted to share it with the world. I transitioned
 Note: While the blog theme itself was originally developed around 2016, it was officially uploaded to GitHub in 2020.
 
 
-2015年ごろ、ブロガーという職業が流行り始めた時期にwordpressを知りました。当時全くプログラミングを知らなかった私ですが、色々なブログを見ていて、自分は文章を書くより素敵なデザインのブログ自体を作りたいと思うようになりました。
+2016年ごろ、ブロガーという職業が流行り始めた時期にwordpressを知りました。当時全くプログラミングを知らなかった私ですが、色々なブログを見ていて、自分は文章を書くより素敵なデザインのブログ自体を作りたいと思うようになりました。
 
 フェーズ1：デザインとテーマ開発
 まずは頭の中にあるイメージを紙に書き起こすことから始め、HTML/CSSの本を片手に設計を進めました。自分のPC内にXAMPPでローカル環境にインストールし、約2ヶ月半かけてWordPressテーマをフルスクラッチで制作しました。
