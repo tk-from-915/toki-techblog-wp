@@ -23,6 +23,33 @@ Note: While the blog theme itself was originally developed around 2016, it was o
 ※このブログテーマ自体は2016年ごろに作成したものですが、GitHubにアップロードしたのは2020年ごろになります。
 
 
+## Theme Structure / テーマ構成
+
+The custom WordPress theme **TokiMemo** is located in `wp-content/themes/TokiMemo/`. (`images/` directory is omitted)
+
+自作WordPressテーマ **TokiMemo** は `wp-content/themes/TokiMemo/` に格納されています。（`images/` ディレクトリは省略）
+
+```
+TokiMemo/
+├── style.css                       # Theme stylesheet & metadata / テーマのスタイルとメタ情報
+├── functions.php                   # Theme functions, custom post types, widgets / テーマ関数・カスタム投稿タイプ・ウィジェット登録
+├── header.php                      # Global header / 共通ヘッダー
+├── header-index.php                # Header for top page / トップページ用ヘッダー
+├── footer.php                      # Global footer / 共通フッター
+├── sidebar.php                     # Sidebar / サイドバー
+├── index.php                       # Category archive / カテゴリーアーカイブ
+├── single.php                      # Single post / 個別記事
+├── page.php                        # Fixed page / 固定ページ
+├── archive.php                     # Archive / アーカイブ
+├── tag.php                         # Tag archive / タグアーカイブ
+├── top.php                         # Top page / トップページ
+├── sitemap.php                     # Sitemap page / サイトマップ
+├── searchform.php                  # Search form / 検索フォーム
+├── taxonomy-framework-product.php  # Custom taxonomy template / カスタムタクソノミーテンプレート
+├── screenshot.png                  # Theme preview image / テーマプレビュー画像
+└── wingpen.ico                     # Favicon / ファビコン
+```
+
 ---
 
 ## Getting Started / 起動方法
