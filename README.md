@@ -1,7 +1,7 @@
 # toki-techblog-wp
 
 ## Overview&Background / 概要と背景
-Around 2016, when the concept of "professional blogging" was beginning to trend, I first discovered WordPress. As I explored various blogs, I realized that rather than writing articles, my true passion lay in creating the beautiful, high-quality designs of the blogs themselves—despite having no prior programming knowledge at the time.
+Around 2016, when the concept of "professional blogging" was beginning to trend, I first discovered WordPress. Even though I had absolutely no programming knowledge at the time, I wanted to design the blog myself to bring the vision in my head life rather than just writing aricles.
 
 Phase 1: Design & Theme Development
 I started by sketching my visual concepts on paper and began designing with HTML/CSS textbooks in hand. I install XAMPP on my PC and spent approximately two and a half months building a custom WordPress theme from scratch.
